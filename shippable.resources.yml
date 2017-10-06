@@ -12,4 +12,5 @@ resources:
   - name: nightly_trigger
     type: time
     seed:
-      interval: "0 22 * * *" # this field accepts cron like syntax
+      interval: "*/1 * * * *"
+      #interval: "0 22 * * *" # this field accepts cron like syntax
