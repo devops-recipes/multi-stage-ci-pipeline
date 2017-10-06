@@ -5,6 +5,7 @@ jobs:
     steps:
       - IN: multi_ci_gitRepo
       - TASK:
+        - script: sudo apt-get update && sudo apt-get install nodejs && sudo apt-get install npm
         - script: $MULTI_CI_GITREPO_PATH/npm install --only=dev
         - script: $MULTI_CI_GITREPO_PATH/gitRepo/node_modules/.bin/eslint app.js
       - OUT: multi-stage-ci-app_ciRepo
