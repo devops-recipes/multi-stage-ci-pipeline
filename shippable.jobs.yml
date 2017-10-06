@@ -5,7 +5,7 @@ jobs:
     steps:
       - IN: multi_ci_gitRepo
       - TASK:
-        - script: pushd $MULTI_CI_GITREPO_PATH
+        - script: pushd $MULTI_CI_GITREPO_PATH/gitRepo
         - script: npm install --only=dev
         - script: $MULTI_CI_GITREPO_PATH/gitRepo/node_modules/.bin/eslint app.js
       - OUT: multi-stage-ci-app_ciRepo
