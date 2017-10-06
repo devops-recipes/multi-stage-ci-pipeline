@@ -1,0 +1,14 @@
+jobs:
+
+  - name: multi-ci-runlint-job
+      type: runSh
+      steps:
+        - IN: multi_ci_repo
+        - TASK:
+          - script: npm install --only=dev
+          - script: ./node_modules/.bin/eslint app.js
+
+  - name: multi-stage-ci-app_runCI
+    type: runCI
+    steps:
+      - IN: multi-ci-runSh
