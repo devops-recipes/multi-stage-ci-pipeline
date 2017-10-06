@@ -8,7 +8,7 @@ resources:
       sourceName: devops-recipes/multi-stage-ci-app
       branch: master
       buildOnPullRequest: true
-      buildOnCommit: false
+      buildOnCommit: true
 
   - name: nightly_trigger
     type: time
