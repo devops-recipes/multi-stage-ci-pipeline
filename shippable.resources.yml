@@ -1,9 +1,10 @@
 # GitHub repo holding scripts to be used in runsh pipeline job
 resouces:
 
-  - name: multi_ci_repo
+  - name: multi_ci_gitRepo
     type: gitRepo
     integration: github
     pointer:
       sourceName: devops-recipes/multi-stage-ci-app
       branch: master
+      buildOnPullRequest: true
