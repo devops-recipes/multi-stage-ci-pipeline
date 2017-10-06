@@ -14,3 +14,8 @@ jobs:
     type: runCI
     steps:
       - IN: lint_runSh_job
+      - IN: nightly_trigger
+    on_success:
+      - script: echo 'build succeded'
+    on_failure:
+      - script: echo 'build failed :('
