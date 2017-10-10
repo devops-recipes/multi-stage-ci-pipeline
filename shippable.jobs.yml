@@ -3,10 +3,10 @@ jobs:
   - name: lint_runSh_job
     type: runSh
     steps:
-      - IN: multi_ci_gitRepo
+      - IN: app_gitRepo
       - TASK:
-        - script: pushd $MULTI_CI_GITREPO_PATH/gitRepo
+        - script: pushd $APP_GITREPO_PATH/gitRepo
         - script: npm install --only=dev
-        - script: $MULTI_CI_GITREPO_PATH/gitRepo/node_modules/.bin/eslint app.js
+        - script: $APP_GITREPO_PATH/gitRepo/node_modules/.bin/eslint app.js
       - OUT: multi-stage-ci-app_ciRepo
         replicate: multi_ci_gitRepo
