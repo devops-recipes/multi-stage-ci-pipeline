@@ -13,8 +13,3 @@ jobs:
 
   - name: multi-stage-ci-app_runCI
     type: runCI
-    steps:
-    on_success:
-      - script: echo 'build succeded'
-    on_failure:
-      - script: echo 'build failed :('
