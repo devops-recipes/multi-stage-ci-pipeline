@@ -10,3 +10,6 @@ jobs:
         - script: $APP_GITREPO_PATH/gitRepo/node_modules/.bin/eslint app.js
       - OUT: multi-stage-ci-app_ciRepo
         replicate: app_gitRepo
+
+  - name: multi-stage-ci-app_runCI
+    type: runCI
