@@ -1,7 +1,7 @@
 # GitHub repo holding scripts to be used in runsh pipeline job
 resources:
 
-  - name: multi_ci_gitRepo
+  - name: app_gitRepo
     type: gitRepo
     integration: github
     pointer:
