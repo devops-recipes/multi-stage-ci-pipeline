@@ -9,8 +9,3 @@ resources:
       branch: master
       buildOnPullRequest: true
       buildOnCommit: false
-
-  - name: nightly_trigger
-    type: time
-    seed:
-      interval: "0 22 * * *" # this field accepts cron like syntax
